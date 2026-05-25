@@ -20,7 +20,7 @@ cp -r $src/crash-gcore/src/* $extdir
 cp $src/crash-cacheutils/cacheutils.c $extdir
 cp $src/crash-pageowner/page_owner.c $extdir
 cp $src/crash-diskutils/scsi.{c,mk} $extdir
-cp --update=none $src/crash-extensions/*.{c,mk} $extdir
+cp -n $src/crash-extensions/*.{c,mk} $extdir
 tar -xf $src/crash-extensions/ptdump-1.0.7.tar.gz \
 	--transform=s:ptdump-1.0.7:$extdir: --exclude=COPYING
 eppic_branch=$(grep -Po '(?<=EPPIC_BRANCH=)v[0-9.]+' $extdir/eppic.mk)
