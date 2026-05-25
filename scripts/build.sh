@@ -47,3 +47,5 @@ strip --strip-debug output/*
 # Don't strip mpykdump.so or it would delete necessary sections.
 cp pykdump/Extension/mpykdump.so output
 chmod a-x output/*.so
+
+echo 'Build completed successfully.'
